@@ -10,7 +10,7 @@ const Info = ({style, imgUrl, imgAlt, heading, info, backBtnHandler}) => {
                 <span>
                     Back
                 </span>
-                <img src="img/arrow-left.svg" alt="arrow"/>
+                <img src="/sneaker-head-shop/img/arrow-left.svg" alt="arrow"/>
             </button>
         </div>
     )

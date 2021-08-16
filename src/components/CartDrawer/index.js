@@ -52,7 +52,7 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                 <div className={styles.heading + ' d-flex'}>
                     <h4>Cart</h4>
                     <button className={styles.closeCartBtn} onClick={closeCart}>
-                        <img src="img/remove.svg" alt="close"/>
+                        <img src="/sneaker-head-shop/img/remove.svg" alt="close"/>
                     </button>
                 </div>
                 {
@@ -60,7 +60,7 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                         ?
                         <Info
                             style={`${styles.body} ${styles.empty}`}
-                            imgUrl={"img/orderComplete.jpg"}
+                            imgUrl={"/sneaker-head-shop/img/orderComplete.jpg"}
                             imgAlt={"Order is complete"}
                             heading={"Order complete!"}
                             info={`Your order #${orderId} will be soon shipped.`}
@@ -82,7 +82,7 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                                                 </div>
                                                 <button
                                                     onClick={() => onRemoveFromCart(cartItems.filter(obj => obj.itemId === item.id))}>
-                                                    <img src="img/remove.svg" alt="remove product"/>
+                                                    <img src="/sneaker-head-shop/img/remove.svg" alt="remove product"/>
                                                 </button>
                                             </div>
                                         ))
@@ -105,14 +105,14 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                                         <span>
                                             Order
                                         </span>
-                                        <img src="img/arrow-right.svg" alt="arrow"/>
+                                        <img src="/sneaker-head-shop/img/arrow-right.svg" alt="arrow"/>
                                     </button>
                                 </div>
                             </div>
                             :
                             <Info
                                 style={`${styles.body} ${styles.empty}`}
-                                imgUrl={"img/cartEmpty.png"}
+                                imgUrl={"/sneaker-head-shop/img/cartEmpty.png"}
                                 imgAlt={"Cart is empty"}
                                 heading={"Cart is empty"}
                                 info={"Add at least one pair to make an order."}
