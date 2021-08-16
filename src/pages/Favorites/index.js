@@ -12,6 +12,9 @@ function Favorites({onAddFavorite, onRemoveFavorite, onAddToCart}) {
 
     return (
         <main>
+            <div className="d-flex align-center justify-between">
+                <h2>My favorites</h2>
+            </div>
             {
                 !favoriteItems.length ?
                     <Info
@@ -24,9 +27,6 @@ function Favorites({onAddFavorite, onRemoveFavorite, onAddToCart}) {
                     />
                     :
                     <div>
-                        <div className="d-flex align-center justify-between">
-                            <h2>My favorites</h2>
-                        </div>
                         <div className="cards d-flex flex-wrap justify-center mt-40">
                             {
                                 items.filter(item => {

@@ -2,12 +2,13 @@ import React from "react";
 import axios from "axios";
 import ContentLoader from "react-content-loader"
 import {useHistory} from "react-router-dom";
+import {AppContext} from "../../context";
 import Info from "../Info";
 import OrderCard from "./OrderCard";
 import styles from "./Profile.module.scss";
 
 function Profile() {
-    const [orders, setOrders] = React.useState([]);
+    const { orders, setOrders} = React.useContext(AppContext);
     const [isLoaded, setIsLoaded] = React.useState(false);
 
     React.useEffect(() => {

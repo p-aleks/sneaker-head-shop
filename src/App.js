@@ -14,6 +14,7 @@ function App() {
     const [items, setItems] = React.useState([]);
     const [cartItems, setCartItems] = React.useState([]);
     const [favoriteItems, setFavoriteItems] = React.useState([]);
+    const [orders, setOrders] = React.useState([]);
     const [isDataLoaded, setIsDataLoaded] = React.useState(false);
 
     React.useEffect(() => {
@@ -105,6 +106,8 @@ function App() {
                 cartItems,
                 favoriteItems,
                 setCartItems,
+                orders,
+                setOrders,
                 checkIsInCart,
                 isDataLoaded,
                 setIsShownCart,

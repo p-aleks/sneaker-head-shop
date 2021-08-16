@@ -46,6 +46,8 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
         items.filter(item => checkIsInCart(item.id))
             .reduce((a, c) => a + c.price, 0);
     const taxAmount = totalPrice / 20;
+
+
     return (
         <div className={`${styles.drawerBackdrop} ${isOpen ? styles.open : ''}`} onClick={closeCart}>
             <div className={styles.drawer + ' d-flex flex-column p-30'} onClick={(e) => e.stopPropagation()}>
@@ -56,17 +58,6 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                     </button>
                 </div>
                 {
-                    isOrderComplete
-                        ?
-                        <Info
-                            style={`${styles.body} ${styles.empty}`}
-                            imgUrl={"/sneaker-head-shop/img/orderComplete.jpg"}
-                            imgAlt={"Order is complete"}
-                            heading={"Order complete!"}
-                            info={`Your order #${orderId} will be soon shipped.`}
-                            backBtnHandler={closeCart}
-                        />
-                        :
                         cartItemsData.length
                             ?
                             <div className={styles.body}>
@@ -110,14 +101,25 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                                 </div>
                             </div>
                             :
-                            <Info
-                                style={`${styles.body} ${styles.empty}`}
-                                imgUrl={"/sneaker-head-shop/img/cartEmpty.png"}
-                                imgAlt={"Cart is empty"}
-                                heading={"Cart is empty"}
-                                info={"Add at least one pair to make an order."}
-                                backBtnHandler={closeCart}
-                            />
+                            isOrderComplete
+                                ?
+                                <Info
+                                    style={`${styles.body} ${styles.empty}`}
+                                    imgUrl={"/sneaker-head-shop/img/orderComplete.jpg"}
+                                    imgAlt={"Order is complete"}
+                                    heading={"Order complete!"}
+                                    info={`Your order #${orderId} will be soon shipped.`}
+                                    backBtnHandler={closeCart}
+                                />
+                                :
+                                <Info
+                                    style={`${styles.body} ${styles.empty}`}
+                                    imgUrl={"/sneaker-head-shop/img/cartEmpty.png"}
+                                    imgAlt={"Cart is empty"}
+                                    heading={"Cart is empty"}
+                                    info={"Add at least one pair to make an order."}
+                                    backBtnHandler={closeCart}
+                                />
 
                 }
             </div>
