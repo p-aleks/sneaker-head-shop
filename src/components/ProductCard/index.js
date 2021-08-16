@@ -64,7 +64,7 @@ function ProductCard(
                                     <img
                                         width={32}
                                         height={32}
-                                        src={isFavorite ? "/sneaker-head-shop/img/added-favorite.svg" : "img/add-favorite.svg"}
+                                        src={isFavorite ? "/sneaker-head-shop/img/added-favorite.svg" : "/sneaker-head-shop/img/add-favorite.svg"}
                                         alt={isFavorite ? "added to favorites" : "add to favorites"}/>
                                 </button>
                             }
@@ -82,7 +82,7 @@ function ProductCard(
                                     <img
                                         width={32}
                                         height={32}
-                                        src={checkIsInCart(id) ? "/sneaker-head-shop/img/added-cart.svg" : "img/add-cart.svg"}
+                                        src={checkIsInCart(id) ? "/sneaker-head-shop/img/added-cart.svg" : "/sneaker-head-shop/img/add-cart.svg"}
                                         alt={checkIsInCart(id) ? "added to cart" : "add to cart"}/>
                                 </button>
                             }

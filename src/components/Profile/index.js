@@ -14,7 +14,7 @@ function Profile() {
         (async () => {
             try {
                 setIsLoaded(false);
-                const ordersRes = await axios.get('http://60f2e6966d44f300177887fa.mockapi.io/orders');
+                const ordersRes = await axios.get('https://60f2e6966d44f300177887fa.mockapi.io/orders');
 
                 setOrders(ordersRes.data);
                 setIsLoaded(true);
