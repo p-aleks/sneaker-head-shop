@@ -16,7 +16,7 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
             try {
                 setIsLoading(true);
                 const newOrder = await axios.post(
-                    'http://60f2e6966d44f300177887fa.mockapi.io/orders',
+                    'https://60f2e6966d44f300177887fa.mockapi.io/orders',
                     {
                         items: items.filter(item => checkIsInCart(item.id)),
                         price: totalPrice + taxAmount,
