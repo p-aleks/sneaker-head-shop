@@ -22,7 +22,7 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
                         price: totalPrice + taxAmount,
                         timeOrdered: new Date()
                     });
-                const newCartItems = await axios.put('http://60f2e6966d44f300177887fa.mockapi.io/cart/0', {items: []});
+                const newCartItems = await axios.put('https://60f2e6966d44f300177887fa.mockapi.io/cart/0', {items: []});
 
                 setCartItems(newCartItems.data.items);
                 setOrders(perv => [...perv, newOrder.data]);
