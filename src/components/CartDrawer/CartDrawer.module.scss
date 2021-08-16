@@ -1,0 +1,120 @@
+.drawerBackdrop {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    opacity: 0.1;
+    transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+
+    .drawer {
+        transform: translate(0);
+    }
+}
+
+.drawer {
+    position: absolute;
+    width: 385px;
+    height: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    transform: translate(100%);
+    transition: transform 300ms ease-in-out;
+
+    .heading {
+        h4 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .closeCartBtn {
+            margin-left: auto;
+        }
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+
+        &.empty {
+            h4 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(0,0,0,0.4);
+                text-align: center;
+            }
+        }
+
+        .products {
+            max-height: 470px;
+            overflow: auto;
+            padding-right: 25px;
+        }
+
+        .card {
+            width: 325px;
+            height: 119px;
+            padding: 20px;
+
+            background: #FFFFFF;
+            border: 1px solid #F3F3F3;
+            box-sizing: border-box;
+            border-radius: 20px;
+
+            .productImg {
+                height: 70px;
+                width: 70px;
+            }
+
+            .productName {
+                margin: 0;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .productPrice {
+                margin: 7px 0 0;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            button {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .cartInfo {
+            margin-top: auto;
+
+            .cartTotal, .cartTax {
+                height: 20px;
+            }
+
+            .dashedLine {
+                border-bottom: 1px dashed #DFDFDF;
+                flex: 1;
+                margin: 0 10px 5px;
+            }
+        }
+    }
+}
