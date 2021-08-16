@@ -5,12 +5,12 @@ import {AppContext} from "../../context";
 function Header() {
     const {items, checkIsInCart, setIsShownCart} = React.useContext(AppContext);
     const openCart = () => {
-        // document.body.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
         setIsShownCart(true);
     };
     return (
         <header className="d-flex justify-between p-45">
-            <Link to="/">
+            <Link to="/sneaker-head-shop">
                 <div className="headerLeft d-flex">
                     <img width={40} height={40} src="img/logo.svg" alt="logo"/>
                     <div className="headerInfo ml-15">

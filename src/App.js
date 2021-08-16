@@ -121,17 +121,17 @@ function App() {
 
 
                 <Switch>
-                    <Route path="/favorites">
+                    <Route path="/sneaker-head-shop/favorites">
                         <Favorites
                             onAddFavorite={onAddFavorite}
                             onRemoveFavorite={onRemoveFavorite}
                             onAddToCart={onAddToCart}
                         />
                     </Route>
-                    <Route path="/profile">
+                    <Route path="/sneaker-head-shop/profile">
                         <Profile/>
                     </Route>
-                    <Route path="/">
+                    <Route path="/sneaker-head-shop">
                         <Home
                             onAddFavorite={onAddFavorite}
                             onRemoveFavorite={onRemoveFavorite}

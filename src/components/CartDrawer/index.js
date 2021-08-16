@@ -37,7 +37,7 @@ function CartDrawer({onRemoveFromCart, isOpen}) {
         postData();
     };
     const closeCart = () => {
-        // document.body.style.overflow = 'visible';
+        document.body.style.overflow = 'visible';
         setIsShownCart(false);
     };
 

@@ -20,7 +20,7 @@ function Favorites({onAddFavorite, onRemoveFavorite, onAddToCart}) {
                         imgAlt={"Emoji"}
                         heading={"You don't have any favorites :("}
                         info={"You didn't add anything to favorites yet"}
-                        backBtnHandler={() => history.push('/')}
+                        backBtnHandler={() => history.push('/sneaker-head-shop')}
                     />
                     :
                     <div>

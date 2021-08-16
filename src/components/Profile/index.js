@@ -40,7 +40,7 @@ function Profile() {
                             imgAlt={"Emoji"}
                             heading={"You don't have any orders yet :("}
                             info={"Order soon and enjoy your new sneakers!"}
-                            backBtnHandler={() => history.push('/')}
+                            backBtnHandler={() => history.push('/sneaker-head-shop')}
                         />
                         :
                         <div className={styles.orderCards + " mt-40"}>
