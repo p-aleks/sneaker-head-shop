@@ -20,9 +20,9 @@ function App() {
         async function fetchData() {
             try {
                 const [cartItemsRes, favoritesRes, itemsRes] = await Promise.all([
-                    axios.get('https://60f2e6966d44f300177887fa.mockapi.io/cart/0'),
-                    axios.get('https://60f2e6966d44f300177887fa.mockapi.io/favorites'),
-                    axios.get('https://60f2e6966d44f300177887fa.mockapi.io/products')
+                    axios.get('http://60f2e6966d44f300177887fa.mockapi.io/cart/0'),
+                    axios.get('http://60f2e6966d44f300177887fa.mockapi.io/favorites'),
+                    axios.get('http://60f2e6966d44f300177887fa.mockapi.io/products')
                 ]);
 
 
@@ -50,7 +50,7 @@ function App() {
         async function postData() {
             try {
                 const newCart = [...cartItems, {itemId: id}];
-                const newCartItems = await axios.put('https://60f2e6966d44f300177887fa.mockapi.io/cart/0', {items: newCart});
+                const newCartItems = await axios.put('http://60f2e6966d44f300177887fa.mockapi.io/cart/0', {items: newCart});
 
                 setCartItems(newCartItems.data.items);
             } catch (e) {
@@ -69,7 +69,7 @@ function App() {
         async function postData() {
             try {
                 const newCart = cartItems.filter(obj => obj.itemId !== cartItem.itemId);
-                const newCartItems = await axios.put('https://60f2e6966d44f300177887fa.mockapi.io/cart/0', {items: newCart});
+                const newCartItems = await axios.put('http://60f2e6966d44f300177887fa.mockapi.io/cart/0', {items: newCart});
 
                 setCartItems(newCartItems.data.items);
             } catch (e) {
@@ -82,7 +82,7 @@ function App() {
 
     const onAddFavorite = async (id) => {
         try {
-            await axios.post('https://60f2e6966d44f300177887fa.mockapi.io/favorites', {id})
+            await axios.post('http://60f2e6966d44f300177887fa.mockapi.io/favorites', {id})
                 .then(res => setFavoriteItems(prev => [res.data, ...prev]));
         } catch (e) {
             console.error(e);
@@ -92,7 +92,7 @@ function App() {
     const onRemoveFavorite = async ([favoriteItem]) => {
         try {
             setFavoriteItems(prev => prev.filter(item => item.id !== favoriteItem.id));
-            await axios.delete(`https://60f2e6966d44f300177887fa.mockapi.io/favorites/${favoriteItem.objID}`);
+            await axios.delete(`http://60f2e6966d44f300177887fa.mockapi.io/favorites/${favoriteItem.objID}`);
         } catch (e) {
             console.error(e);
         }

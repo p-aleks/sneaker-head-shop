@@ -40,7 +40,7 @@ function Home({ onAddFavorite, onRemoveFavorite, onAddToCart }) {
             <div className={`${styles.heading} d-flex align-center justify-between`}>
                 <h2>{searchValue ? `Search results by query: "${searchValue}"` : 'All sneakers'}</h2>
                 <div className="searchBlock d-flex align-center">
-                    <img src="/img/search-icn.svg" alt="search"/>
+                    <img src="img/search-icn.svg" alt="search"/>
                     <input className="searchInput" placeholder="Search..." type="text" value={searchValue}
                            onChange={onChangeSearchInput}/>
                 </div>

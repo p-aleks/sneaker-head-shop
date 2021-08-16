@@ -16,7 +16,7 @@ function Favorites({onAddFavorite, onRemoveFavorite, onAddToCart}) {
                 !favoriteItems.length ?
                     <Info
                         style={styles.favoritesEmpty + ' text-center'}
-                        imgUrl={Math.floor(Math.random() * 2) + 1 === 1 ? '/img/emoji1.png' : '/img/emoji2.png'}
+                        imgUrl={Math.floor(Math.random() * 2) + 1 === 1 ? 'img/emoji1.png' : 'img/emoji2.png'}
                         imgAlt={"Emoji"}
                         heading={"You don't have any favorites :("}
                         info={"You didn't add anything to favorites yet"}

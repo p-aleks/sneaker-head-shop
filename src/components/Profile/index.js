@@ -14,7 +14,7 @@ function Profile() {
         (async () => {
             try {
                 setIsLoaded(false);
-                const ordersRes = await axios.get('https://60f2e6966d44f300177887fa.mockapi.io/orders');
+                const ordersRes = await axios.get('http://60f2e6966d44f300177887fa.mockapi.io/orders');
 
                 setOrders(ordersRes.data);
                 setIsLoaded(true);
@@ -36,7 +36,7 @@ function Profile() {
                     !orders.length ?
                         <Info
                             style={styles.ordersEmpty + ' text-center'}
-                            imgUrl={Math.floor(Math.random() * 2) + 1 === 1 ? '/img/emoji1.png' : '/img/emoji2.png'}
+                            imgUrl={Math.floor(Math.random() * 2) + 1 === 1 ? 'img/emoji1.png' : 'img/emoji2.png'}
                             imgAlt={"Emoji"}
                             heading={"You don't have any orders yet :("}
                             info={"Order soon and enjoy your new sneakers!"}
