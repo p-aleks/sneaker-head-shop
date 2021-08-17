@@ -5,7 +5,7 @@ https://p-aleks.github.io/sneaker-head-shop/
 
 
 
-Standard react-create-app info
+# Standard react-create-app info
 
 # Getting Started with Create React App
 
