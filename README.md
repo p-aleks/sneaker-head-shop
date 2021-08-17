@@ -1,3 +1,12 @@
+# Check this app live on GitHub Pages
+https://p-aleks.github.io/sneaker-head-shop/
+
+
+
+
+
+Standard react-create-app info
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
